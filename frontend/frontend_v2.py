@@ -18,8 +18,8 @@ from streamlit_folium import st_folium
 
 from src.config import DATA_DIR
 from src.inference import fetch_next_hour_predictions, load_batch_of_features_from_store
-from src.plot_utils import plot_prediction
-#from src.plot_utils import plot_aggregated_time_series
+#from src.plot_utils import plot_prediction
+from src.plot_utils import plot_aggregated_time_series
 
 # Add parent directory to Python path
 
