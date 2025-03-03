@@ -1,26 +1,13 @@
 import sys
 from pathlib import Path
-import zipfile
-import folium
-import geopandas as gpd
-import matplotlib.pyplot as plt
-import pandas as pd
-import requests
-import streamlit as st
-from branca.colormap import LinearColormap
-from streamlit_folium import st_folium
 
-from src.config import DATA_DIR
-from src.inference import fetch_next_hour_predictions, load_batch_of_features_from_store
-from src.plot_utils import plot_prediction
-
-
-
-parent_dir = str(Path(__file__).parent.parent)
+parent_dir = str(Path(_file_).parent.parent)
 sys.path.append(parent_dir)
 
-import plotly.express as px
 
+import pandas as pd
+import plotly.express as px
+import streamlit as st
 
 from src.inference import fetch_hourly_rides, fetch_predictions
 
