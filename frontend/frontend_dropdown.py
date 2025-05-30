@@ -1,4 +1,5 @@
 import sys
+import os
 from pathlib import Path
 
 parent_dir = str(Path(__file__).parent.parent)
@@ -140,7 +141,8 @@ with st.spinner("Fetching predictions"):
     progress_bar.progress(3 / N_STEPS)
 
 # Load taxi zone lookup
-lookup_path = r"C:\Users\vasub\Downloads\taxi_zone_lookup.csv"
+#lookup_path = r"C:\Users\vasub\Desktop\UB Learn\Spring_2025\Applied_ML\Projects\sp25_taxi-main\taxi_zone_lookup.csv"
+lookup_path = os.path.join(os.path.dirname(__file__), "taxi_zone_lookup.csv")
 taxi_zone_lookup = pd.read_csv(lookup_path)
 taxi_zone_lookup = taxi_zone_lookup[['LocationID', 'Zone']]
 taxi_zone_lookup.rename(columns={'LocationID': 'pickup_location_id', 'Zone': 'pickup_location_name'}, inplace=True)
